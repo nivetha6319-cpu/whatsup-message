@@ -1,0 +1,76 @@
+{
+  "name": "Whatsapp bot n8n",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "minutes"
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.4,
+      "position": [
+        0,
+        0
+      ],
+      "id": "171fc1ad-d20d-480b-80db-a260759f5184",
+      "name": "Schedule Trigger"
+    },
+    {
+      "parameters": {
+        "operation": "send",
+        "phoneNumberId": "1384322478096105",
+        "recipientPhoneNumber": "91 9489231632",
+        "textBody": "losuuu",
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.whatsApp",
+      "typeVersion": 1.1,
+      "position": [
+        224,
+        0
+      ],
+      "id": "a81155b7-80b0-4797-bd9f-a2607c5a4aa3",
+      "name": "Send message",
+      "webhookId": "d37556d5-7071-4825-817f-f628c663084a",
+      "credentials": {
+        "whatsAppApi": {
+          "id": "e2th7wgtE0AJrPyi",
+          "name": "WhatsApp account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Schedule Trigger": {
+      "main": [
+        [
+          {
+            "node": "Send message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate",
+    "availableInMCP": true
+  },
+  "versionId": "80c8d661-f929-4900-924e-995811ea30ef",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "745e482b30e1bea1e12b78e8d7c8051d4805997d861c3baa076f75f4b8fa77fa"
+  },
+  "nodeGroups": [],
+  "id": "pEPVFvcQvQK1ln8l",
+  "tags": []
+}
